@@ -1,0 +1,22 @@
+[package]
+name = "rust-grpc-todo"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+tonic = "0.5"
+tokio = { version = "1", features = ["full"] }
+prost = "0.8"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1.0"
+
+[build-dependencies]
+tonic-build = "0.5"
+
+[[bin]]
+name = "server"
+path = "src/server.rs"
+
+[[bin]]
+name = "client"
+path = "src/client.rs"
